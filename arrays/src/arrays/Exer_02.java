@@ -9,13 +9,12 @@ public class Exer_02 {
 
 		// LER AS LINHAS
 		for (indiceI = 0; indiceI < vetor.length; indiceI++) {
-
 			// LER AS COLUNAS
 			for (indiceJ = 0; indiceJ < vetor.length; indiceJ++) {
-				System.out.print(vetor[indiceI][indiceJ] + " ");
+				System.out.print(vetor[indiceI][indiceJ] + " \t");
 
 			}
-			System.out.println();
+			System.out.println("\t");
 		}
 
 		// LER A DIAGONAL PRINCIPAL
@@ -36,8 +35,8 @@ public class Exer_02 {
 		System.out.println();
 		System.out.print("Elementos da Diagonal Principal: ");
 		for (indiceI = 0; indiceI < vetor.length; indiceI++) {
-			System.out.print(vetor[indiceI][3-1-indiceI] + " ");
-			somaD += vetor[indiceI][3-1-indiceI];
+			System.out.print(vetor[indiceI][vetor.length-1-indiceI] + " ");
+			somaD += vetor[indiceI][vetor.length-1-indiceI];
 		}
 		System.out.println();
 		System.out.println();
