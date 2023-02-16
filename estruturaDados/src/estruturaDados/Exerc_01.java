@@ -68,6 +68,7 @@ public class Exerc_01 {
 		} while (opcao != 0);
 		
 		System.out.println("Programa Finalizado!");
+		leia.close();
 
 	}
 

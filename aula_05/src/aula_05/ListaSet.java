@@ -1,6 +1,7 @@
 package aula_05;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class ListaSet {
@@ -18,6 +19,10 @@ public class ListaSet {
 		notas.add(7.0);
 		notas.add(20.0);
 		
+		
+		
+		
+		
 		System.out.println("Listando todas as notas:");
 		notas.forEach(System.out::println);
 		
@@ -32,6 +37,9 @@ public class ListaSet {
 		System.out.println("Mostrando o HashCode");
 		for(var nota : notas)
 			System.out.println(nota.hashCode());
+		
+		
+		
 	}
 
 }
