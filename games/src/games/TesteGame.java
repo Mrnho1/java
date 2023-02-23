@@ -22,7 +22,7 @@ public class TesteGame {
 		
 		g1.visualizar();
 		
-		Console c1 = new Console(123,1,"God of War",127.0f,"CC","X-box");
+		Console c1 = new Console(23,2,"The Last of Us",190.0f,"D","Suspense","X-Box");
 		
 		c1.visualizar();
 	}
