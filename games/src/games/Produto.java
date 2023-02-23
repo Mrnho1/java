@@ -1,6 +1,6 @@
 package games;
 
-public class Produto {
+public abstract class Produto  {
 
 	private int codigo;
 	private int tipo;
@@ -8,7 +8,7 @@ public class Produto {
 	private double preco;
 	private String forma;
 	
-	//Construtores
+//Construtores
 	public Produto(int codigo, int tipo, String jogo, double preco, String forma) {
 		this.codigo = codigo;
 		this.tipo = tipo;
@@ -18,7 +18,7 @@ public class Produto {
 	}
 	
 	
-	//Métodos Get e Set
+//Métodos Get e Set
 	public int getCodigo() {
 		return codigo;
 	}
@@ -51,21 +51,25 @@ public class Produto {
 	}
 	
 	
-	//Método para vizualisar
-	public void vizualisar() {
+//Método para visualizar
+	public void visualizar() {
+		
+		
+//ESCOLHA A FORMA DE PAGAMENTO
 		String forma = "";
 		switch(this.forma) {
 		case "CC" ->  forma = "Cartão de Crédito";
 		case "CD" ->  forma = "Cartão de Dédito";
 		case "D" ->  forma = "Dinheiro";
 		}
-		
+//ESCOLHA O TIPO DE MÍDIA
 		String tipo = "";
 		switch(this.tipo) {
 		case 1 ->  tipo = "Mídia Física";
 		case 2 ->  tipo = "Mídia Digital";
 		}
-		
+
+//MOSTRAR NA TELA O VIZUALIZAR
 		System.out.println("=============================");
 		System.out.println("DADOS DO PRODUTO");
 		System.out.println("=============================");

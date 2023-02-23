@@ -76,10 +76,7 @@ public class Funcionario {
 	
 	
 	
-	public void vizualisar() {
-		
-		
-		
+	public void visualizar() {
 		
 		System.out.println("=============================");
 		System.out.println("DADOS DO PRODUTO");
@@ -88,6 +85,7 @@ public class Funcionario {
 		System.out.println("Função: \t\t"+this.funcao);
 		System.out.println("Meses de empresa:  \t"+this.meses);
 		System.out.println("Salário:         \t"+this.salario);
+//CONTA PARA EFETUAR O AUMENTO
 		System.out.println("Novo Salário:    \t"+(this.aumento = this.salario + (this.getSalario()*this.getAumento())));
 		
 	}

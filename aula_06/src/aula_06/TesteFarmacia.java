@@ -12,10 +12,11 @@ public class TesteFarmacia {
 		Scanner leia = new Scanner(System.in);
 		
 		
-		ArrayList <Farmacia> medicamentos = new ArrayList<Farmacia>();
+		ArrayList <Farmacia> farmacia = new ArrayList<Farmacia>();
 		
+		int tipo;
 		long id;
-		String nome, nomeComercial, fabricante, foto,opcao;
+		String nome, nomeComercial, fabricante, foto,opcao,principioAtivo,fragancia;
 		float preco;
 		
 		do {
@@ -32,12 +33,34 @@ public class TesteFarmacia {
 		foto = leia.nextLine();
 		System.out.println("\nPreço: ");
 		preco = leia.nextFloat();
+		System.out.println("\nTipo: ");
+		tipo = leia.nextInt();
+		
+		
+		//Farmacia f1 = new Farmacia(id,nome,nomeComercial,fabricante,foto,preco,tipo);
 		
 		
 		
-		Farmacia f1 = new Farmacia(id,nome,nomeComercial,fabricante,foto,preco);
+		switch(tipo) {
+		case 1 ->{
+			System.out.println("\nPrincípio Ativo: ");
+			leia.skip("\\R?");
+			principioAtivo = leia.nextLine();
+			Medicamento m1 = new Medicamento(id,nome,nomeComercial,fabricante,foto,preco,tipo,principioAtivo);
+			farmacia.add(m1);
+		}
+		case 2 ->{
+			System.out.println("\nFragancia: ");
+			leia.skip("\\R?");
+			fragancia = leia.nextLine();
+			Perfumaria p1 = new Perfumaria(id,nome,nomeComercial,fabricante,foto,preco,tipo,fragancia);
+			farmacia.add(p1);
+		}
+		}
+
+
 		
-		medicamentos.add(f1);
+		//farmacia.add(f1);
 		
 		System.out.println("\nDeseja Continuar? ");
 		leia.skip("\\R?");
@@ -48,8 +71,9 @@ public class TesteFarmacia {
 		}while(opcao.equalsIgnoreCase( "S"));
 		
 		
-		for(var medicamento :medicamentos) {
-			medicamento.visualizar();
+		for(var produto :farmacia) {
+			produto.reajuste(0.10f);
+			produto.visualizar();
 		}
 		
 		//Farmacia f2 = new Farmacia(2,"Paracetamol","Tylenol","Neo Quimica","-",20.0f);
